@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>book-shop</title>
+</head>
+
+<body onload="onInit()">
+    <h2 data-trans="title">Welcome to my book shop!</h2>
+    <select onchange="onSetLang(this.value)">
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+
+
+    </select>
+
+    <button type="button" class="btn btn-success" data-trans="add-new-btn" class='add-new' onclick="openBookModal()">Add
+        new book</button>
+    <div class="newbook-hide" hidden>
+        <form onsubmit="onAddBook(event)">
+            <input data-trans="add-book-placeholder" class="book-name" placeholder="book name">
+            <br>
+            <input data-trans="add-price-placeholder" class="book-price" placeholder="price"><button hidden>Add
+                book</button>
+        </form>
+    </div>
+    <div class="container">
+        <table class="table mt-4 ">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" data-trans="table-id">id</th>
+                    <th scope="col" data-trans="table-title" onclick="onSetSort('title')">Title</th>
+                    <th scope="col" data-trans="table-price" onclick="onSetSort('price')">Price</th>
+                    <th scope="col" data-trans="table-actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="main-table">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="pages">
+        <button class="btn btn-outline-primary" onclick="(onTurnPage(-1))">Prev</button>
+        <span>1</span>
+        <button class="btn btn-outline-primary" onclick="(onTurnPage(1))">Next</button>
+    </div>
+    <div class="book-modal" hidden>
+        <h5></h5>
+        <div class="rate-container">
+
+        </div>
+        <div class="img-container"></div>
+        <p></p>
+        <button data-trans="close-modal-btn" onclick="onCloseModal()">Close</button>
+    </div>
+    <script src=" js/i18n-service.js"></script>
+    <script src=" js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>
+
+
+<!-- <a href="https://a2rafee.files.wordpress.com/2010/08/rain.jpg">
+    Rain is Here -->

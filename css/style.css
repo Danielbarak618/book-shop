@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+td,
+th {
+  border: 1px solid black;
+}
+
+body {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+.add-new {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.book-modal {
+  background-color: lightgray;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  height: 100%;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* .read {
+  background-color: lightblue;
+}
+
+.update {
+  background-color: yellow;
+}
+
+.delete {
+  background-color: red;
+} */
+
+/* .newbook-hide {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+} */
